@@ -1,5 +1,5 @@
 $LOAD_PATH <<'.'
-require 'test.rb'
+require 'product.rb'
 prod = ["Pao", "Margarina", "Mortadela","Queijo Mussarela","Doce de leite"]
 prodPrice = [2.0, 3.50, 2.0, 2.0, 3.0]
 carrinho = 0
@@ -11,13 +11,13 @@ while(ver==0)
     puts " "
 
     pro = Product.new(0, prod[0], prodPrice[0] ,"pao frances")
-    pro.view
+    puts pro.view
     pro = Product.new(1, prod[1], prodPrice[1] ,"Margarina Doriana")
-    pro.view
+    puts pro.view
     pro = Product.new(2, prod[2], prodPrice[2] , "Morgadela defumada")
-    pro.view
+    puts pro.view
     pro = Product.new(3, prod[3], prodPrice[3] , "Queijo mussarela artesanal")
-    pro.view
+    puts pro.view
     pro = Product.new(4, prod[4], prodPrice[4] , "Doce de leite Amarelo")
 
     puts " "

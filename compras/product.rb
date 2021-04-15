@@ -8,7 +8,7 @@ class Product
         @description = description
     end
     def view
-        puts "#{@counter} - #{@name} - R$#{@price} - #{@description}"
+        "#{@counter} - #{@name} - R$#{@price} - #{@description}"
     end
 end
 
