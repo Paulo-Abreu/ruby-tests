@@ -11,12 +11,22 @@ module Sales_manager
     end
     def create_sale(items)
         total_price = 0
-        id = 0
+        id
         total_products = items.count
-        items.each do |p|
+        iems.each do |p|
             total_price += p.price
         end
-        id_venda+=1
+        id+=1
         Sale.new(id,total_products,total_price)
+    end
+    def response_as_json(sale, items)
+        
+        sale_hash = {
+            id: sale.id,
+            total_products: sale.total_products,
+            total_price: sale.total_price,
+            items: items.map{ |pro| pro}
+        }
+        return sale_hash
     end
 end
