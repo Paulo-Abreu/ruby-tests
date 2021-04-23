@@ -11,21 +11,25 @@ module Sales_manager
     end
     def create_sale(items)
         total_price = 0
-        id
+        id = 0
         total_products = items.count
-        iems.each do |p|
+        items.each do |p|
             total_price += p.price
         end
         id+=1
         Sale.new(id,total_products,total_price)
     end
+    private
+    def map_to_json(pro)
+        {id: pro.id, product_id: pro.product_id, price: pro.price}    
+    end
+    public
     def response_as_json(sale, items)
-        
         sale_hash = {
             id: sale.id,
             total_products: sale.total_products,
             total_price: sale.total_price,
-            items: items.map{ |pro| pro}
+            items: items.map{|pro|map_to_json(pro)}
         }
         return sale_hash
     end
