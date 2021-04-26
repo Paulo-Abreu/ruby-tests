@@ -16,4 +16,4 @@ puts "A media de perco dos produtos  de: #{var}"
 value = sale_json.dig(:items)
 arr = []
 value.map{|a|arr << a[:price]}
-puts  "Seu produto mais caro tem o valor de: #{arr.sort.reverse[0]}"
+puts  "Seu produto mais caro multiplicado por 10 tem o valor de: #{arr.sort.reverse[0]*10}"

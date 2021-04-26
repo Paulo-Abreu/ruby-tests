@@ -25,7 +25,7 @@ module Sales_manager
         {id: pro.id, product_id: pro.product_id, price: pro.price}    
     end
     public
-    def response_as_json(sale,items)
+    def response_as_json(sale, items)
         sale_hash = {
             id: sale.id,
             total_products: sale.total_products,
