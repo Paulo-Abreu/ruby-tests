@@ -15,3 +15,4 @@ contacts = [{id:1,name:"Marlon",email:"marl@gma(il.com",phone:419598656,user_id:
 userjs = users.map{ |users| User_services.create_user(users[:id], users[:name], users[:email], users[:phone])}
 contactsjs = contacts.map{ |contacts| Contact_services.create_contact(contacts[:id], contacts[:name], contacts[:email],contacts[:phone], contacts[:user_id])}
 to_json = Response_service.response_as_json(contactsjs, userjs)
+puts to_json

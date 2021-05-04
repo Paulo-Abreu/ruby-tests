@@ -22,10 +22,8 @@ module Response_service
                             name: contato.name,
                             phone: contato.phone,
                             email: contato.email,
-                            user_id: contato.user_id
                         ]
                     }
-                    puts list
                 end
             end
         end
